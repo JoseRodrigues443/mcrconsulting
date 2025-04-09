@@ -4,7 +4,7 @@ import { CheckCircle } from 'lucide-react';
 
 const About = () => {
   return (
-    <section id="about" className="py-16 md:py-24 bg-gray-50">
+    <section id="about" className="py-16 md:py-24 bg-mcr-lightblue">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div>
@@ -28,7 +28,7 @@ const About = () => {
             </div>
           </div>
           
-          <div className="bg-white p-8 rounded-lg shadow-md border border-gray-100">
+          <div className="bg-mcr-blue/5 p-8 rounded-lg shadow-md border border-mcr-blue/10">
             <h3 className="section-subheading">Our Approach</h3>
             <div className="space-y-6">
               <ApproachStep 

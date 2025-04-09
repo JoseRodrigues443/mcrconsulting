@@ -13,7 +13,7 @@ type ServiceProps = {
 const ServiceCard = ({ title, description, icon: Icon, className }: ServiceProps) => {
   return (
     <div className={cn(
-      "bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow border border-gray-100",
+      "bg-mcr-blue/5 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow border border-mcr-blue/10",
       className
     )}>
       <div className="rounded-full bg-mcr-teal/10 w-12 h-12 flex items-center justify-center mb-4">
@@ -27,7 +27,7 @@ const ServiceCard = ({ title, description, icon: Icon, className }: ServiceProps
 
 const Services = () => {
   return (
-    <section id="services" className="py-16 md:py-24 bg-gray-50">
+    <section id="services" className="py-16 md:py-24 bg-mcr-lightblue">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="section-heading">Our Services</h2>

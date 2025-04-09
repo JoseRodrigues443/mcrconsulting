@@ -11,12 +11,12 @@ const Navbar = () => {
   };
 
   return (
-    <header className="bg-white shadow-sm sticky top-0 z-50">
+    <header className="bg-mcr-blue text-white shadow-md sticky top-0 z-50">
       <div className="container mx-auto px-4 py-4">
         <div className="flex justify-between items-center">
           <div className="flex items-center">
             <a href="/" className="flex items-center">
-              <span className="text-2xl font-bold text-mcr-blue">MCR</span>
+              <span className="text-2xl font-bold text-white">MCR</span>
               <span className="text-xl font-medium text-mcr-teal ml-1">Consulting</span>
             </a>
           </div>
@@ -33,7 +33,7 @@ const Navbar = () => {
           <div className="md:hidden">
             <button
               onClick={toggleMenu}
-              className="text-mcr-blue hover:text-mcr-teal focus:outline-none"
+              className="text-white hover:text-mcr-teal focus:outline-none"
               aria-label="Toggle menu"
             >
               {isMenuOpen ? (
@@ -64,7 +64,7 @@ const NavLink = ({ href, children, className }: { href: string; children: React.
     <a
       href={href}
       className={cn(
-        "text-mcr-dark font-medium hover:text-mcr-teal transition-colors py-2",
+        "text-white font-medium hover:text-mcr-teal transition-colors py-2",
         className
       )}
     >
@@ -85,7 +85,7 @@ const MobileNavLink = ({
   return (
     <a
       href={href}
-      className="block w-full py-2 text-mcr-dark hover:text-mcr-teal transition-colors"
+      className="block w-full py-2 text-white hover:text-mcr-teal transition-colors"
       onClick={onClick}
     >
       {children}

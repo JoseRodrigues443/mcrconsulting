@@ -16,7 +16,7 @@ const TechCategory = ({ title, items, className }: TechCategoryProps) => {
         {items.map((item, index) => (
           <div 
             key={index} 
-            className="bg-white text-mcr-blue px-4 py-2 rounded-md shadow-sm border border-gray-200 hover:border-mcr-teal transition-colors"
+            className="bg-mcr-blue text-white px-4 py-2 rounded-md shadow-sm border border-mcr-blue/20 hover:bg-mcr-blue/90 transition-colors"
           >
             {item}
           </div>
@@ -28,7 +28,7 @@ const TechCategory = ({ title, items, className }: TechCategoryProps) => {
 
 const Technologies = () => {
   return (
-    <section id="technologies" className="py-16 md:py-24">
+    <section id="technologies" className="py-16 md:py-24 bg-mcr-light">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="section-heading">Technologies We Work With</h2>
