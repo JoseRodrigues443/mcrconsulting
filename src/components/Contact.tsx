@@ -15,7 +15,7 @@ const Contact = () => {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           <div className="bg-mcr-blue/5 p-8 rounded-lg shadow-md border border-mcr-blue/10">
-            <h3 className="text-2xl font-semibold mb-6 text-mcr-blue">Send us a message</h3>
+            <h3 className="text-2xl font-semibold mb-6 text-mcr-glow">Send us a message</h3>
             <form className="space-y-4">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
@@ -23,7 +23,7 @@ const Contact = () => {
                   <input
                     type="text"
                     id="name"
-                    className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-mcr-teal"
+                    className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-mcr-teal bg-mcr-blue/10 text-white"
                     placeholder="Your name"
                   />
                 </div>
@@ -32,7 +32,7 @@ const Contact = () => {
                   <input
                     type="email"
                     id="email"
-                    className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-mcr-teal"
+                    className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-mcr-teal bg-mcr-blue/10 text-white"
                     placeholder="Your email"
                   />
                 </div>
@@ -42,7 +42,7 @@ const Contact = () => {
                 <input
                   type="text"
                   id="subject"
-                  className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-mcr-teal"
+                  className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-mcr-teal bg-mcr-blue/10 text-white"
                   placeholder="Subject"
                 />
               </div>
@@ -51,7 +51,7 @@ const Contact = () => {
                 <textarea
                   id="message"
                   rows={5}
-                  className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-mcr-teal"
+                  className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-mcr-teal bg-mcr-blue/10 text-white"
                   placeholder="Your message"
                 ></textarea>
               </div>
@@ -66,7 +66,7 @@ const Contact = () => {
 
           <div className="flex flex-col justify-between">
             <div>
-              <h3 className="text-2xl font-semibold mb-6 text-mcr-blue">Contact Information</h3>
+              <h3 className="text-2xl font-semibold mb-6 text-mcr-glow">Contact Information</h3>
               <div className="space-y-6">
                 <ContactInfo
                   icon={MapPin}
@@ -113,7 +113,7 @@ const ContactInfo = ({
         <Icon className="h-5 w-5 text-mcr-teal" />
       </div>
       <div>
-        <h4 className="font-semibold text-mcr-blue">{title}</h4>
+        <h4 className="font-semibold text-mcr-glow">{title}</h4>
         <p className="text-mcr-gray">{detail}</p>
       </div>
     </div>

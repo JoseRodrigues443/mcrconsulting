@@ -19,8 +19,8 @@ const ServiceCard = ({ title, description, icon: Icon, className }: ServiceProps
       <div className="rounded-full bg-mcr-teal/10 w-12 h-12 flex items-center justify-center mb-4">
         <Icon className="h-6 w-6 text-mcr-teal" />
       </div>
-      <h3 className="text-xl font-semibold mb-3 text-mcr-blue">{title}</h3>
-      <p className="text-mcr-gray">{description}</p>
+      <h3 className="text-xl font-semibold mb-3 text-mcr-glow">{title}</h3>
+      <p className="text-gray-300">{description}</p>
     </div>
   );
 };
@@ -31,7 +31,7 @@ const Services = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="section-heading">Our Services</h2>
-          <p className="text-lg text-mcr-gray max-w-3xl mx-auto">
+          <p className="text-lg text-gray-300 max-w-3xl mx-auto">
             We provide comprehensive technology solutions to help businesses transform and thrive in the digital age.
           </p>
         </div>

@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { cn } from '@/lib/utils';
-import { Code, Server, Database, Globe } from 'lucide-react';
+import { Code, Server, Database, Globe, Brain } from 'lucide-react';
 
 type TechCategoryProps = {
   title: string;
@@ -72,6 +72,12 @@ const Technologies = () => {
             title="APIs & Integration" 
             items={["REST", "GraphQL", "gRPC", "Kong", "API Gateway", "Microservices"]} 
             icon={<Globe className="h-5 w-5 text-mcr-glow" />}
+          />
+
+          <TechCategory 
+            title="Artificial Intelligence" 
+            items={["Ollama", "OpenRouter", "LLM Integration", "AI Agents", "Vector Databases", "Embeddings"]} 
+            icon={<Brain className="h-5 w-5 text-mcr-glow" />}
           />
         </div>
       </div>
