@@ -1,23 +1,43 @@
 
-import React, { useState } from 'react';
-import { Menu, X } from 'lucide-react';
+import React, { useState, useEffect } from 'react';
+import { Menu, X, Layers } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+  
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 20);
+    };
+    
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
   return (
-    <header className="bg-mcr-blue text-white shadow-md sticky top-0 z-50">
-      <div className="container mx-auto px-4 py-4">
+    <header className={cn(
+      "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
+      scrolled 
+        ? "bg-mcr-dark/80 backdrop-blur-md border-b border-mcr-purple/10 py-3" 
+        : "bg-transparent py-5"
+    )}>
+      <div className="container mx-auto px-4">
         <div className="flex justify-between items-center">
           <div className="flex items-center">
-            <a href="/" className="flex items-center">
-              <span className="text-2xl font-bold text-white">MCR</span>
-              <span className="text-xl font-medium text-mcr-teal ml-1">Consulting</span>
+            <a href="/" className="flex items-center group">
+              <div className="w-8 h-8 mr-2 bg-gradient-to-br from-mcr-teal to-mcr-purple rounded-md flex items-center justify-center animate-float">
+                <Layers className="h-5 w-5 text-white" />
+              </div>
+              <div>
+                <span className="text-2xl font-bold text-white">MCR</span>
+                <span className="text-xl font-medium text-mcr-teal ml-1">Consulting</span>
+              </div>
             </a>
           </div>
 
@@ -64,11 +84,12 @@ const NavLink = ({ href, children, className }: { href: string; children: React.
     <a
       href={href}
       className={cn(
-        "text-white font-medium hover:text-mcr-teal transition-colors py-2",
+        "text-white font-medium relative py-2 group",
         className
       )}
     >
       {children}
+      <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-mcr-teal group-hover:w-full transition-all duration-300"></span>
     </a>
   );
 };
@@ -85,7 +106,7 @@ const MobileNavLink = ({
   return (
     <a
       href={href}
-      className="block w-full py-2 text-white hover:text-mcr-teal transition-colors"
+      className="block w-full py-2 px-2 text-white hover:bg-white/5 rounded transition-colors"
       onClick={onClick}
     >
       {children}
