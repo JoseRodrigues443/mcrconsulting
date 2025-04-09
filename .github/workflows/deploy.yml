@@ -28,4 +28,4 @@ jobs:
         with:
           folder: dist
           branch: gh-pages
-          token: ${{ secrets.DEPLOY_TOKEN }}
+          token: ${{ secrets.GITHUB_TOKEN }}
